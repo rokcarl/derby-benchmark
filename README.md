@@ -19,3 +19,11 @@ If you need additional functionality, do the following:
 1. Change the Python code as needed.
 2. `make build`.
 3. `make run` or just run the above command.
+
+## Example
+
+For running this against two Derby databases to compare the results, run:
+
+```
+docker run --rm --network host rokcarl/derby-benchmark /app/run.py database_name "select * from customers" db1:9000 db2:9000
+```
